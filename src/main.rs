@@ -52,7 +52,7 @@ fn generate_random_data() -> Vec<TableRow> {
     let mut rng = rand::thread_rng();
     let mut data = Vec::new();
 
-    for i in 0..1000 {
+    for i in 0..100 {
         let num_children = rng.gen_range(0..6);
         let children: Vec<Child> = (0..num_children)
             .map(|j| Child {
