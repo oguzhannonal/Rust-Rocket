@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Data Table</title>
+    <style>
+        table { border-collapse: collapse; width: 100%; }
+        th, td { border: 1px solid black; padding: 8px; }
+        .child-row { background-color: #f0f0f0; }
+    </style>
+</head>
+<body>
+    <a href="/logout">Logout</a>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Column 1</th>
+                <th>Column 2</th>
+                <th>Column 3</th>
+                <th>Column 4</th>
+                <th>Column 5</th>
+                <th>Column 6</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each rows}}
+            <tr>
+                <td>{{id}}</td>
+                <td>{{column1}}</td>
+                <td>{{column2}}</td>
+                <td>{{column3}}</td>
+                <td>{{column4}}</td>
+                <td>{{column5}}</td>
+                <td>{{column6}}</td>
+            </tr>
+            {{#if children}}
+                {{#each children}}
+                <tr class="child-row">
+                    <td>{{id}}</td>
+                    <td>{{column1}}</td>
+                    <td>{{column2}}</td>
+                    <td>{{column3}}</td>
+                    <td>{{column4}}</td>
+                    <td>{{column5}}</td>
+                    <td>{{column6}}</td>
+                </tr>
+                {{/each}}
+            {{/if}}
+            {{/each}}
+        </tbody>
+    </table>
+</body>
+</html> 
